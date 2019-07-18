@@ -42,7 +42,9 @@
             // TODO1 送信ボタンが押された時の処理
             
             $('#led-on').click(function() {
-		    $('<p>{led: "ON"}<\p>').appendTo('#ledRef');
+		   ledRef.add({
+			name: $('{led: "ON"}').val(),
+			body: $('{led: "OFF"}').val()
             });
             $('#led-off').click(function() {
 		    $('<p>{led: "OFF"}</p>').appendTo('#ledRef');
